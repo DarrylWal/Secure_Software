@@ -112,9 +112,8 @@ DROP TABLE IF EXISTS `Order_form`;
 CREATE TABLE `Order_form` (
   `Item` varchar(35) DEFAULT NULL,
   `Quantity` int(11) DEFAULT NULL,
-  `Approve` varchar(3) DEFAULT NULL,
-  `Disapprove` varchar(3) DEFAULT NULL,
-  `Employee_ID` int(11) DEFAULT NULL
+  `Employee_ID` int(11) DEFAULT NULL,
+  `Status` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -124,7 +123,7 @@ CREATE TABLE `Order_form` (
 
 LOCK TABLES `Order_form` WRITE;
 /*!40000 ALTER TABLE `Order_form` DISABLE KEYS */;
-INSERT INTO `Order_form` VALUES ('Valspar',10,'yes',NULL,1003);
+INSERT INTO `Order_form` VALUES ('Valspar',10,1003,NULL);
 /*!40000 ALTER TABLE `Order_form` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -188,4 +187,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-04-30 18:46:26
+-- Dump completed on 2015-04-30 19:47:12
